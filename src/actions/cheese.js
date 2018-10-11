@@ -21,7 +21,7 @@ export const fetchCheesesRequest = value => {
 
 export const getCheesesActionAsync = value => dispatch => {
 	dispatch(fetchCheesesRequest());
-	return fetch(process.env.REACT_APP_API_BASE_URL)
+	return fetch("https://cheesehubserver.herokuapp.com/api/cheeses")
 		.then(res => {
 			return res.json();
 		})
