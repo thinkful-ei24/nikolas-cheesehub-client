@@ -21,7 +21,7 @@ export const fetchCheesesRequest = value => {
 
 export const getCheesesActionAsync = value => dispatch => {
 	dispatch(fetchCheesesRequest());
-	return fetch("http://localhost:8080/api/cheeses")
+	return fetch(process.env.REACT_APP_API_BASE_URL)
 		.then(res => {
 			return res.json();
 		})
