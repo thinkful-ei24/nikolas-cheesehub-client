@@ -19,7 +19,10 @@ class App extends Component {
 }
 
 function mapStateToProps(state) {
-	return state;
+	console.log(state);
+	return {
+		cheeses: state.cheeseReducer.cheeses
+	};
 }
 
 export default connect(mapStateToProps)(App);
